@@ -1,0 +1,46 @@
+﻿<Page x:Class="AnimePickerWPF.pages.TitlePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimePickerWPF.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="titleName" FontSize="36" Text="gkjhbfkjbdfnvlk" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="48, 0, 48, 0"/>
+
+        <StackPanel Orientation="Vertical"  Grid.Row="1" Grid.Column="0" Margin="48, 24, 48, 80">
+            <Border CornerRadius="16" HorizontalAlignment="Center" VerticalAlignment="Top" Height="550">
+                <Image x:Name="titleImg"/>
+            </Border>
+
+            <ComboBox x:Name="addComboBox" Height="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 16, 0, 0" HorizontalContentAlignment="Center" Width="400" SelectionChanged="addComboBox_SelectionChanged">
+                <TextBlock Text="Добавть в список" FontSize="24"/>
+                <TextBlock Text="Просмотрено" FontSize="24"/>
+                <TextBlock Text="Смотрю" FontSize="24"/>
+                <TextBlock Text="Запланировано" FontSize="24"/>
+                <TextBlock Text="Брошено" FontSize="24"/>
+            </ComboBox>
+        </StackPanel>
+
+        <TextBlock x:Name="titleTypeTxt" Text="Тип: " FontSize="30" Grid.Column="1" Grid.Row="1" Margin="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="titleRateTxt" Text="Оценка: " FontSize="30" Grid.Column="2" Grid.Row="1" Margin="32, 32, 72, 32" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+
+        <ScrollViewer  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"  Margin="32, 80, 16, 12" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="titleDescription" FontSize="36" TextWrapping="Wrap"/>
+        </ScrollViewer>
+    </Grid>
+</Page>

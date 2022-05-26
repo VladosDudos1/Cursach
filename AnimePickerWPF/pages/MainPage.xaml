@@ -1,0 +1,66 @@
+﻿<Page x:Class="AnimePickerWPF.pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimePickerWPF.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainPage" Background="#E5E5E5">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="cbPick" Width="260" Height="60"  Grid.Row="0"  FontSize="30" FontFamily="Arial" BorderBrush="White" SelectionChanged="Cb_Unit_SelectionChanged" SelectedIndex="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Anime"/>
+            <TextBlock Text="Manga"/>
+        </ComboBox>
+
+        <ListView x:Name="AnimeLv2"  Grid.Row="1"  BorderBrush="#E5E5E5" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionChanged="AnimeLv_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="4"></UniformGrid>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="8">
+                        <Image Source="{Binding imageUrl}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="350"/>
+                        <Label Height="50" HorizontalAlignment="Center" FontSize="18" Content="{Binding name}" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    </StackPanel>
+
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <ListView x:Name="AnimeLv"  Grid.Row="1"  BorderBrush="#E5E5E5" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionChanged="AnimeLv_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="4"></UniformGrid>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="8">
+                        <Image Source="{Binding imageUrl}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="350"/>
+                        <Label Height="70" HorizontalAlignment="Center" FontSize="18" Content="{Binding name}" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    </StackPanel>
+
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </Grid>
+</Page>

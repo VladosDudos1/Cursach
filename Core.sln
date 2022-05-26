@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{5457697E-2739-44D1-BF2A-464DF7A03F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimePickerWPF", "AnimePickerWPF\AnimePickerWPF.csproj", "{AE928F35-F39F-4417-873B-A18D82CF1F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimePicker", "AnimePicker\AnimePicker.csproj", "{B39035B8-7255-45D7-9FE2-FEDCD96ADCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{EE35FDD6-650F-4A80-93F4-C42E77B99F7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5457697E-2739-44D1-BF2A-464DF7A03F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5457697E-2739-44D1-BF2A-464DF7A03F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5457697E-2739-44D1-BF2A-464DF7A03F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5457697E-2739-44D1-BF2A-464DF7A03F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE928F35-F39F-4417-873B-A18D82CF1F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE928F35-F39F-4417-873B-A18D82CF1F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE928F35-F39F-4417-873B-A18D82CF1F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE928F35-F39F-4417-873B-A18D82CF1F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B39035B8-7255-45D7-9FE2-FEDCD96ADCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B39035B8-7255-45D7-9FE2-FEDCD96ADCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B39035B8-7255-45D7-9FE2-FEDCD96ADCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B39035B8-7255-45D7-9FE2-FEDCD96ADCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE35FDD6-650F-4A80-93F4-C42E77B99F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE35FDD6-650F-4A80-93F4-C42E77B99F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE35FDD6-650F-4A80-93F4-C42E77B99F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE35FDD6-650F-4A80-93F4-C42E77B99F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB8106FE-7463-49B7-B1A4-F5D22E369FA6}
+	EndGlobalSection
+EndGlobal

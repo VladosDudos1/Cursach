@@ -1,0 +1,75 @@
+﻿<Page x:Class="AnimePickerWPF.pages.MyListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimePickerWPF.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      FontSize="28">
+
+    <Grid VerticalAlignment="Top">
+
+        <ScrollViewer x:Name="scrollView" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" CanContentScroll="True" PreviewMouseWheel="scrollView_PreviewMouseWheel">
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Завершено" Margin="8,0,0,0"  TextAlignment="Left" FontSize="40" Background="#FFA4A3A3" FontWeight="Bold"/>
+                <DataGrid x:Name="endedDG" Foreground="Black" BorderBrush="{x:Null}" AutoGenerateColumns="False" ItemsSource="{Binding DoneList}" IsReadOnly="True" Background="White" ScrollViewer.VerticalScrollBarVisibility="Hidden" GridLinesVisibility="None">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="#FFA4A3A3"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=""/>
+                        <DataGridTextColumn Header="Название" Width="7*" Binding="{Binding name}"/>
+                        <DataGridTextColumn Header="Эпизоды" Binding="{Binding episodes}"/>
+                        <DataGridTextColumn Header=""/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock Text="В процессе" Margin="8,0,0,0"  TextAlignment="Left" FontSize="40" Background="#FFA4A3A3" FontWeight="Bold"/>
+                <DataGrid ItemsSource="{Binding ProcessList}" x:Name="nowDG" Foreground="Black" BorderBrush="{x:Null}" AutoGenerateColumns="False" IsReadOnly="True" Background="White" ScrollViewer.VerticalScrollBarVisibility="Hidden" GridLinesVisibility="None">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="#FFA4A3A3"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=""/>
+                        <DataGridTextColumn Header="Название" Width="6*" Binding="{Binding name}"/>
+                        <DataGridTextColumn Header="Эпизоды" Binding="{Binding episodes}"/>
+                        <DataGridTextColumn Header=""/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock Text="Запланировано" Margin="8,0,0,0" TextAlignment="Left" FontSize="40" Background="#FFA4A3A3" FontWeight="Bold"/>
+                <DataGrid ItemsSource="{Binding PlaneList}" x:Name="planingDG" Foreground="Black" BorderBrush="{x:Null}" AutoGenerateColumns="False" IsReadOnly="True" Background="White" ScrollViewer.VerticalScrollBarVisibility="Hidden" GridLinesVisibility="None">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="#FFA4A3A3"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=""/>
+                        <DataGridTextColumn Header="Название" Width="6*" Binding="{Binding name}"/>
+                        <DataGridTextColumn Header="Эпизоды" Binding="{Binding episodes}"/>
+                        <DataGridTextColumn Header=""/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock Text="Брошено" Margin="8,0,0,0"  TextAlignment="Left" FontSize="40" Background="#FFA4A3A3" FontWeight="Bold"/>
+                <DataGrid ItemsSource="{Binding LeaveList}" x:Name="leaveDG" Foreground="Black" BorderBrush="{x:Null}" AutoGenerateColumns="False" IsReadOnly="True" Background="White" ScrollViewer.VerticalScrollBarVisibility="Hidden" GridLinesVisibility="None">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="#FFA4A3A3"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=""/>
+                        <DataGridTextColumn Header="Название" Width="6*" Binding="{Binding name}"/>
+                        <DataGridTextColumn Header="Эпизоды" Binding="{Binding episodes}"/>
+                        <DataGridTextColumn Header=""/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
