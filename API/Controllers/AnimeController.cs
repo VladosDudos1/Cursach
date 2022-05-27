@@ -12,7 +12,7 @@ namespace API.Controllers
     public class AnimeController : Controller
     {
         [HttpGet]
-        public IEnumerable<ListType> GetListTye()
+        public IEnumerable<ListType> GetListType()
         {
             return DataManager.GetListTypes();
         }
